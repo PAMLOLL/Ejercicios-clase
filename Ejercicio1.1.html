@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <script>
+        function multiplica(){
+            var horas = document.getElementById("horas").value;
+            var minutos = document.getElementById("minutos").value;
+            var segundos = document.getElementById("segundos").value;
+            var resultado = parseInt(horas)*3600 + parseInt(minutos)*60 + parseInt(segundos);
+            
+            document.getElementById("mensaje").innerHTML = "Han pasado: " + resultado + "segundos";
+             
+        }
+    </script>
+    <form>
+        horas: <input id="horas" type="text" /> </br>
+        minutos: <input id="minutos" type="text" /> </br>
+        segundos: <input id="segundos" type="text" /> </br>
+        <input type="button" value="Enviar" onclick="multiplica()"/>
+
+    </form>
+
+    <div id="mensaje">
+
+    </div>
+
+
+</body>
+</html>

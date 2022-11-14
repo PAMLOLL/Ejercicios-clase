@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+              function convertir(){
+                var celsius = document.getElementById("tempcelsius").value;
+                var farenheit = document.getElementById("tempfarenheit").value;
+                var conversionfarenheit = parseInt(celsius)*9/5 +32
+                var conversioncelsius = (parseInt(farenheit)-32)*(5/9)
+                document.getElementById("mensaje1").innerHTML = "Hacen"+ conversionfarenheit +"grados Farenheit";
+                document.getElementById("mensaje2").innerHTML = "Hacen"+ conversioncelsius +"grados Celsius";
+              }
+
+    </script>
+  
+  <form>
+
+    celsius: <input id="tempcelsius" type="text" /> </br>
+    farenheit: <input id="tempfarenheit" type="text" /> </br>
+    <input type="button" value="Enviar" onclick="convertir()"/>
+
+</form>
+
+<div id="mensaje1">
+</div>
+<div id="mensaje2">
+</div>
+
+</body>
+</html>
